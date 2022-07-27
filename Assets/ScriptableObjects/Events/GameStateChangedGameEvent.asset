@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9059afb6cc649cffaa10aac71adc47cc, type: 3}
   m_Name: GameStateChangedGameEvent
   m_EditorClassIdentifier: 
-  _debugValue: {fileID: 0}
+  _debugValue: {fileID: 11400000, guid: 7f108affe015b32f29676613410f3070, type: 2}

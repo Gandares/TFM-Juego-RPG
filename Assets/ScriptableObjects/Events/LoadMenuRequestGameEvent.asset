@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LoadMenuRequestGameEvent
   m_EditorClassIdentifier: 
   _debugValue:
-    scene: {fileID: 0}
-    loadingScreen: 0
+    scene: {fileID: 11400000, guid: e2081f28d2a6968868c6bf5ed288eae5, type: 2}
+    loadingScreen: 1

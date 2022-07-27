@@ -165,6 +165,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e7778033-81b1-4217-b84b-0d048ce66d94
     m_ActionName: PlayerControls/OpenMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c651448-3fea-45a5-b380-2d5f93105315
+    m_ActionName: Conversation/NextText[/Keyboard/space,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls
@@ -244,6 +248,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onDialogueState:
+    m_PersistentCalls:
+      m_Calls: []
+  onCombatState:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &712805385795749677

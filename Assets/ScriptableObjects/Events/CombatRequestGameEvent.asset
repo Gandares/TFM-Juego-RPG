@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CombatRequestGameEvent
   m_EditorClassIdentifier: 
   _debugValue:
-    player: {fileID: 0}
+    player: {fileID: 11400000, guid: c2d43f8c85208376f8ef965cb46acbc3, type: 2}
     playerPosition: {fileID: 0}
     enemies: []
     enemyPosition: {fileID: 0}

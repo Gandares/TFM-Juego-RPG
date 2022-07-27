@@ -134,6 +134,56 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Conversation",
+            "id": "419ccbd4-9f6d-464a-8d0d-8fac07590920",
+            "actions": [
+                {
+                    "name": "NextText",
+                    "type": "Button",
+                    "id": "0c651448-3fea-45a5-b380-2d5f93105315",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "89ddfb19-8279-40da-ae0c-557f69116e23",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "NextText",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d4aa664-6977-4769-8962-368c93a75c7a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "NextText",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "061b395b-35ba-444a-baef-f418c9e8a2cd",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "NextText",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
