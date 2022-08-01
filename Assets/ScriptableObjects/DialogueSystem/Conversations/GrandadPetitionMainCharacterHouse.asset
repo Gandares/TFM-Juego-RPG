@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a48e3c3705e78d60bfd66aa768f053a, type: 3}
+  m_Name: GrandadPetitionMainCharacterHouse
+  m_EditorClassIdentifier: 
+  leftCharacter: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
+  rightCharacter: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
+  sentences:
+  - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
+    text: "Esta ma\xF1ana paso por aqui Israel, me dijo que tenia un problema con
+      las ratas."
+  - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
+    text: Ultimamente los animales de la zona se estan comportando de manera mas
+      agresiva de lo normal.
+  - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
+    text: Asi que me pregunto si le podrias echar una mano y deshacerte de ellas.
+  - character: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
+    text: Claro, sin problema.
+  - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
+    text: Gracias Gabe, eres una buena persona.
+  - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
+    text: Recuerda que la granja de Israel se encuentra saliendo por la parte este
+      del pueblo, ya el te contara todos los detalles.

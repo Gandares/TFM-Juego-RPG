@@ -3677,8 +3677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1662437668954e66b3dd6486cf11472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: fd2dfbf01bb4d4185bf9a9e9c5b7642e, type: 2}
-  levelEntrance: {fileID: 11400000, guid: 4cf6ade053cbe4a4c8f7d62d89509377, type: 2}
+  sceneToLoad: {fileID: 11400000, guid: e1a05427b5469912cad27d6de4f4d9dd, type: 2}
+  levelEntrance: {fileID: 11400000, guid: 8919c9d21407999ac8dc79ae71c0e1e1, type: 2}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: 83193d68c2de44e0db1abbf5b2334c9d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 1fe240c6082bd408e9980670f68824b1, type: 2}
