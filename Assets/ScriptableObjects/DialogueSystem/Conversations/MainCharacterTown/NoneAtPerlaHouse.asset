@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a48e3c3705e78d60bfd66aa768f053a, type: 3}
-  m_Name: GrandadCallsMainCharacterHouse
+  m_Name: NoneAtPerlaHouse
   m_EditorClassIdentifier: 
   leftCharacter: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
   rightCharacter: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
   sentences:
-  - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
-    text: Buenos dias nieto.
-  - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
-    text: Haz el favor de acercarte, que tengo un recado para ti.
+  - character: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
+    text: No parece que haya nadie dentro, habra salido.

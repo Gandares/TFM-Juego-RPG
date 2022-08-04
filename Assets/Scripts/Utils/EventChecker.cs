@@ -25,8 +25,13 @@ public class EventChecker : MonoBehaviour
             if(contador == total)
             {
                 if (EventImpact != null)
-                    EventImpact.Invoke();
+                    eventImpact();
             }
         }
+    }
+
+    public void eventImpact()
+    {
+        EventImpact.Invoke();
     }
 }

@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6567301715103477752}
   - component: {fileID: 6567301715103477756}
   m_Layer: 3
-  m_Name: Sensei
+  m_Name: Grani
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

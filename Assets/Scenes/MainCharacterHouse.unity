@@ -19048,6 +19048,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 220151783}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTriggerStay:
     m_PersistentCalls:
       m_Calls: []
@@ -20010,15 +20022,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: aa4e8c034826bc4188302f1b92b952db, type: 2}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -20027,11 +20039,11 @@ PrefabInstance:
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 220151783}
+      objectReference: {fileID: 1945811085}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1612187433}
+      objectReference: {fileID: 323759089}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -20050,11 +20062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      value: InGameEventCompleted
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
+      value: eventImpact
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -20062,11 +20074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: SaveInGameEvent, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: EventChecker, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2727360155204387066, guid: ac0e458157ad744d0b28c62b90c40786, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
