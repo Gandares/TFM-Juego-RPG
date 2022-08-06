@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainCharacterHouse.unity
     guid: 53b7f255577f79893a916a10d59ad149
+  - enabled: 1
+    path: Assets/Scenes/IsraelFarm.unity
+    guid: 655ac0c73db3487e7b12dd5abd7facbf
   m_configObjects: {}
