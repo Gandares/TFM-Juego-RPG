@@ -18,7 +18,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 1c5581e333bcd69d599b391681216069, type: 2}
     text: "Buenas Gabe, \xBFtienes planes para hoy?"
   - character: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
-    text: Tengo que ir a la granja de Israel a hacerme cargo de unas ratas.
+    text: Tengo que ir a la granja de Israel a hacerme cargo de unos slimes.
   - character: {fileID: 11400000, guid: 1c5581e333bcd69d599b391681216069, type: 2}
     text: Oh... Una pena, me apetecia pasar el rato contigo...
   - character: {fileID: 11400000, guid: 1c5581e333bcd69d599b391681216069, type: 2}

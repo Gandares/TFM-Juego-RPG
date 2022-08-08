@@ -17,12 +17,12 @@ MonoBehaviour:
   sentences:
   - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
     text: "Esta ma\xF1ana paso por aqui Israel, me dijo que tenia un problema con
-      las ratas."
+      los slimes."
   - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
-    text: Ultimamente los animales de la zona se estan comportando de manera mas
-      agresiva de lo normal.
+    text: Ultimamente los animales y criaturas de la zona se estan comportando de
+      manera mas agresiva de lo normal.
   - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}
-    text: Asi que me pregunto si le podrias echar una mano y deshacerte de ellas.
+    text: Asi que me pregunto si le podrias echar una mano y deshacerte de ellos.
   - character: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
     text: Claro, sin problema.
   - character: {fileID: 11400000, guid: 7470df3100c6cd201a6f36f84f4ef42b, type: 2}

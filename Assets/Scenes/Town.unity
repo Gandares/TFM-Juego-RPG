@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 311493942}
   - component: {fileID: 311493941}
   m_Layer: 7
-  m_Name: MainCharacterHouseLetter (2)
+  m_Name: Fran&JacobHouseLetter
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b4978158c7241a694f418b3ce2f930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 11400000, guid: fa294bbec5239b110bc00c922062c3b1, type: 2}
+  conversation: {fileID: 11400000, guid: 78c4336cbbe989907a286b9c269c05ab, type: 2}
   conversationRequestEvent: {fileID: 11400000, guid: a5ed02c42ce2f2f62b7f0e40074ef403, type: 2}
 --- !u!114 &311493942
 MonoBehaviour:

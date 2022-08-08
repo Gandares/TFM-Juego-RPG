@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a48e3c3705e78d60bfd66aa768f053a, type: 3}
+  m_Name: SlimeWithoutWeaponIsraelFarm
+  m_EditorClassIdentifier: 
+  leftCharacter: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
+  rightCharacter: {fileID: 11400000, guid: e9718a1c45c9fcfad9d00e9fea80a8be, type: 2}
+  sentences:
+  - character: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
+    text: Mejor no acercarse mucho sin un arma.
