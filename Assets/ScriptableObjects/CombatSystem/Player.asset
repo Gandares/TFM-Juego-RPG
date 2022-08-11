@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 984cf1d60544ca30bac3953861288145, type: 3}
-  m_Name: MutantBee
+  m_Name: Player
   m_EditorClassIdentifier: 
-  unitName: Abeja mutante
-  level: 0
-  expBase: 0
+  unitName: Gabe
+  level: 1
+  expBase: 100
   Exp: 0
-  MaxExp: 0
-  baseHP: 40
-  maxHP: 40
-  currentHP: 40
-  attackPowerBase: 5
-  attackPower: 5
-  healingPowerBase: 10
-  healingPower: 10
-  moneyPerDefeat: 10
-  expPerDefeat: 75
-  unitPrefab: {fileID: 7286407337142212520, guid: 8da54f32b768d2621854810c3efbdcff, type: 3}
+  MaxExp: 100
+  baseHP: 100
+  maxHP: 100
+  currentHP: 100
+  attackPowerBase: 10
+  attackPower: 10
+  healingPowerBase: 50
+  healingPower: 50
+  moneyPerDefeat: 0
+  expPerDefeat: 0
+  unitPrefab: {fileID: 239441940318029013, guid: 5e62b99a81dbd6926bb3b051a2fc911b, type: 3}

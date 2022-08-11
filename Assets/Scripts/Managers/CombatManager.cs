@@ -14,9 +14,6 @@ public enum CombatStates
 public class CombatManager : MonoBehaviour
 {
     [Header("Combat Configuration")]
-    public int baseGoldPrize = 10;
-    public float prizeIncrementPerLevel = 0.20f; // 20%
-    public float difficultyIncrementPerLevel = 0.15f; // 15%
     public float timeBetweenActions = 1.5f; // 1.5 seconds
 
     [Header("Combat Messages Configuration")]
@@ -25,6 +22,8 @@ public class CombatManager : MonoBehaviour
     public string playerWonInfoText = "Enemy defeated!";
     public string enemyTurnInfoText = "Enemy's turn...";
     public string enemyAttackedInfoText = "Enemy attacked!";
+    public string noPrimaryWeaponInfoText = "No tiene ningún arma equipada de la primera ranura";
+    public string noSecondaryWeaponInfoText = "No tiene ningún arma equipada de la segunda ranura";
 
     [Header("Dependencies")]
     public CombatUI combatUI;
@@ -33,10 +32,9 @@ public class CombatManager : MonoBehaviour
     // Private
 
     private CombatStates _combatState = CombatStates.NONE;
-    private int _currentLevel = 1;
-    private int _gold = 0;
-
     private CombatRequest _request;
+    public InventorySO _inventory;
+    public CombatUnitSO _Player;
     private CombatUnitSO _currentEnemy;
     private GameObject _currentEnemyGO;
 
@@ -44,9 +42,6 @@ public class CombatManager : MonoBehaviour
     {
         // Save references for later
         this._request = request;
-
-        // Set player's HP to max
-        this._request.player.ResetHP();
 
         // Instantiate player
         GameObject playerGO = Instantiate(this._request.player.unitPrefab, request.playerPosition.position, Quaternion.identity);
@@ -58,23 +53,50 @@ public class CombatManager : MonoBehaviour
 
     public void NextCombat()
     {
-        this._currentLevel += 1;
         StartCoroutine(StartCombat());
     }
 
     public void ResetCombat()
     {
-        this._currentLevel = 1;
-        this._gold = 0;
         StartCoroutine(StartCombat());
     }
 
-    public void OnPlayerAttack()
+    public void OnPlayerAttackPrimaryWeapon()
+    {
+        if (this._combatState != CombatStates.PLAYERTURN)
+            return;
+        if (_inventory.firstWeapon == null)
+        {
+            this.combatUI.SetInfoText(noPrimaryWeaponInfoText);
+            return;
+        }
+        else
+        {
+            PlayerAttack(_inventory.firstWeapon.damage);
+        }
+    }
+
+    public void OnPlayerAttackSecondaryWeapon()
+    {
+        if (this._combatState != CombatStates.PLAYERTURN)
+            return;
+        if (_inventory.secondWeapon == null)
+        {
+            this.combatUI.SetInfoText(noSecondaryWeaponInfoText);
+            return;
+        }
+        else
+        {
+            PlayerAttack(_inventory.secondWeapon.damage);
+        }
+    }
+
+    private void PlayerAttack(float extraDamage)
     {
         if (this._combatState != CombatStates.PLAYERTURN)
             return;
 
-        this._request.player.AttackUnit(this._currentEnemy);
+        this._request.player.AttackUnit(this._currentEnemy, extraDamage);
 
         if (this._currentEnemy.currentHP <= 0f) // Enemy is dead
         {
@@ -96,10 +118,8 @@ public class CombatManager : MonoBehaviour
 
         int randomNumber = Random.Range(0, this._request.enemies.Length);
         this._currentEnemy = this._request.enemies[randomNumber];
-
-        // Setup enemy's life
-        if (this._currentLevel > 1)
-            this._currentEnemy.maxHP *= (1 + difficultyIncrementPerLevel);
+        this._currentEnemy.level = this._Player.level-1;
+        this._currentEnemy.LevelUP();
 
         this._currentEnemy.currentHP = this._currentEnemy.maxHP;
 
@@ -110,7 +130,7 @@ public class CombatManager : MonoBehaviour
         // Configure HUD
         this.combatUI.ResetHUD();
         this.combatUI.ShowCombatMenu();
-        this.combatUI.SetupHUD(this._request.player, this._currentEnemy, this._currentLevel, this._gold);
+        this.combatUI.SetupHUD(this._request.player, this._currentEnemy, _Player.level, _inventory.gold);
         this.combatUI.SetInfoText(combatStartedInfoText);
 
         yield return new WaitForSeconds(this.timeBetweenActions);
@@ -135,7 +155,7 @@ public class CombatManager : MonoBehaviour
 
         // Enemy attacks
         this.combatUI.SetInfoText(enemyAttackedInfoText);
-        this._currentEnemy.AttackUnit(this._request.player);
+        this._currentEnemy.AttackUnit(this._request.player, 0.0f);
 
         yield return new WaitForSeconds(this.timeBetweenActions);
 
@@ -157,14 +177,18 @@ public class CombatManager : MonoBehaviour
         this.combatUI.SetInfoText(playerWonInfoText);
 
         // Get some money for your win
-        var earnedGold = (int)(this.baseGoldPrize * (1 + this.prizeIncrementPerLevel * this._currentLevel));
-        this._gold += earnedGold;
+        int earnedGold = _currentEnemy.moneyPerDefeat;
+        _inventory.gold += earnedGold;
+
+        float earnedEXP = _currentEnemy.expPerDefeat;
+        _Player.GainXP(earnedEXP);
+        Debug.Log(earnedEXP);
 
         // Wait a bit
         yield return new WaitForSeconds(this.timeBetweenActions);
 
         // And show the win menu
-        this.combatUI.ShowWonMenu(this._gold);
+        this.combatUI.ShowWonMenu(earnedGold);
         this.ResetEnemysHPToBase();
         Destroy(this._currentEnemyGO);
         this._currentEnemyGO = null;
