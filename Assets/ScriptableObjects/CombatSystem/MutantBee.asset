@@ -20,10 +20,11 @@ MonoBehaviour:
   baseHP: 40
   maxHP: 40
   currentHP: 40
-  attackPowerBase: 5
+  attackPowerBase: 80
   attackPower: 5
   healingPowerBase: 10
   healingPower: 10
   moneyPerDefeat: 10
   expPerDefeat: 75
+  levelUp: 0
   unitPrefab: {fileID: 7286407337142212520, guid: 8da54f32b768d2621854810c3efbdcff, type: 3}

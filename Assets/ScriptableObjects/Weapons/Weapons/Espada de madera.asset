@@ -16,5 +16,6 @@ MonoBehaviour:
   damage: 10
   magicType: madera
   rareza: comun
-  weaponImage: {fileID: 0}
-  abilities: []
+  weaponImage: {fileID: 3360255035361637215, guid: 8a25c171150bc4c22868a37f2b026767, type: 3}
+  firstAbility: {fileID: 11400000, guid: 545d31c5748e15482b187cb01484dff7, type: 2}
+  secondAbility: {fileID: 0}

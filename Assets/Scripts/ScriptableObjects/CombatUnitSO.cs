@@ -22,15 +22,23 @@ public class CombatUnitSO : ScriptableObject
     public float expPerDefeat;
 
     private float damagePercent = 0.8f;
+    public bool levelUp = false;
 
     public GameObject unitPrefab;
 
 
 
-    public void AttackUnit(CombatUnitSO other, float extraDamage)
+    public void AttackUnit(CombatUnitSO other, float extraDamage, bool usedMagic)
     {
-        float minim = (this.attackPower * damagePercent) + extraDamage;
-        other.TakeDamage(Random.Range(minim,this.attackPower));
+        if (!usedMagic)
+        {
+            float minim = (this.attackPower * damagePercent) + extraDamage;
+            other.TakeDamage(Random.Range(minim,this.attackPower+extraDamage));
+        }
+        else
+        {
+            other.TakeDamage(extraDamage);
+        }
     }
 
     public void TakeDamage(float damage)
@@ -59,6 +67,7 @@ public class CombatUnitSO : ScriptableObject
         this.Exp += experience;
         if (this.Exp >= this.MaxExp)
         {
+            levelUp = true;
             float expRestante = this.Exp - this.MaxExp;
             LevelUP();
             this.Exp += expRestante;

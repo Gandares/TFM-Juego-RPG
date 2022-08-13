@@ -24,6 +24,7 @@ public class CombatManager : MonoBehaviour
     public string enemyAttackedInfoText = "Enemy attacked!";
     public string noPrimaryWeaponInfoText = "No tiene ningún arma equipada de la primera ranura";
     public string noSecondaryWeaponInfoText = "No tiene ningún arma equipada de la segunda ranura";
+    public string NoAbilityInfoText = "Ranura de habilidad vacía.";
 
     [Header("Dependencies")]
     public CombatUI combatUI;
@@ -72,7 +73,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            PlayerAttack(_inventory.firstWeapon.damage);
+            PlayerAttack(_inventory.firstWeapon.damage, false);
         }
     }
 
@@ -87,16 +88,84 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            PlayerAttack(_inventory.secondWeapon.damage);
+            PlayerAttack(_inventory.secondWeapon.damage, false);
         }
     }
 
-    private void PlayerAttack(float extraDamage)
+    public void OnPlayerUseFirstMagicFirstWeapon()
+    {
+        if (this._combatState != CombatStates.PLAYERTURN)
+            return;
+        if (_inventory.firstWeapon == null)
+        {
+            this.combatUI.SetInfoText(noPrimaryWeaponInfoText);
+            return;
+        }
+        if (_inventory.firstWeapon.firstAbility == null)
+        {
+            this.combatUI.SetInfoText(NoAbilityInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.firstWeapon.firstAbility.damage, true);
+    }
+
+    public void OnPlayerUseSecondMagicFirstWeapon()
+    {
+        if (this._combatState != CombatStates.PLAYERTURN)
+            return;
+        if (_inventory.firstWeapon == null)
+        {
+            this.combatUI.SetInfoText(noPrimaryWeaponInfoText);
+            return;
+        }
+        if (_inventory.firstWeapon.secondAbility == null)
+        {
+            this.combatUI.SetInfoText(NoAbilityInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.firstWeapon.secondAbility.damage, true);
+    }
+
+    public void OnPlayerUseFirstMagicSecondWeapon()
+    {
+        if (this._combatState != CombatStates.PLAYERTURN)
+            return;
+        if (_inventory.secondWeapon == null)
+        {
+            this.combatUI.SetInfoText(noSecondaryWeaponInfoText);
+            return;
+        }
+        if (_inventory.secondWeapon.firstAbility == null)
+        {
+            this.combatUI.SetInfoText(NoAbilityInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.secondWeapon.firstAbility.damage, true);
+    }
+
+    public void OnPlayerUseSecondMagicSecondWeapon()
+    {
+        if (this._combatState != CombatStates.PLAYERTURN)
+            return;
+        if (_inventory.secondWeapon == null)
+        {
+            this.combatUI.SetInfoText(noSecondaryWeaponInfoText);
+            return;
+        }
+        if (_inventory.secondWeapon.secondAbility == null)
+        {
+            this.combatUI.SetInfoText(NoAbilityInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.secondWeapon.secondAbility.damage, true);
+    }
+
+    private void PlayerAttack(float extraDamage, bool usedMagic)
     {
         if (this._combatState != CombatStates.PLAYERTURN)
             return;
 
-        this._request.player.AttackUnit(this._currentEnemy, extraDamage);
+        this._request.player.AttackUnit(this._currentEnemy, extraDamage, usedMagic);
 
         if (this._currentEnemy.currentHP <= 0f) // Enemy is dead
         {
@@ -120,6 +189,7 @@ public class CombatManager : MonoBehaviour
         this._currentEnemy = this._request.enemies[randomNumber];
         this._currentEnemy.level = this._Player.level-1;
         this._currentEnemy.LevelUP();
+        this._Player.levelUp = false;
 
         this._currentEnemy.currentHP = this._currentEnemy.maxHP;
 
@@ -130,7 +200,7 @@ public class CombatManager : MonoBehaviour
         // Configure HUD
         this.combatUI.ResetHUD();
         this.combatUI.ShowCombatMenu();
-        this.combatUI.SetupHUD(this._request.player, this._currentEnemy, _Player.level, _inventory.gold);
+        this.combatUI.SetupHUD(this._request.player, this._currentEnemy, this._inventory, _Player.level, _inventory.gold);
         this.combatUI.SetInfoText(combatStartedInfoText);
 
         yield return new WaitForSeconds(this.timeBetweenActions);
@@ -155,7 +225,7 @@ public class CombatManager : MonoBehaviour
 
         // Enemy attacks
         this.combatUI.SetInfoText(enemyAttackedInfoText);
-        this._currentEnemy.AttackUnit(this._request.player, 0.0f);
+        this._currentEnemy.AttackUnit(this._request.player, 0.0f, false);
 
         yield return new WaitForSeconds(this.timeBetweenActions);
 
@@ -188,7 +258,7 @@ public class CombatManager : MonoBehaviour
         yield return new WaitForSeconds(this.timeBetweenActions);
 
         // And show the win menu
-        this.combatUI.ShowWonMenu(earnedGold);
+        this.combatUI.ShowWonMenu(earnedGold, earnedEXP);
         this.ResetEnemysHPToBase();
         Destroy(this._currentEnemyGO);
         this._currentEnemyGO = null;
@@ -198,7 +268,10 @@ public class CombatManager : MonoBehaviour
     {
         this._combatState = CombatStates.LOST;
 
-        this.combatUI.ShowLostMenu();
+        int moneylost = _inventory.gold/2; 
+        _inventory.gold -= moneylost;
+
+        this.combatUI.ShowLostMenu(moneylost);
         this.ResetEnemysHPToBase();
     }
 

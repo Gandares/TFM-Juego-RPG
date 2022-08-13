@@ -26,4 +26,5 @@ MonoBehaviour:
   healingPower: 50
   moneyPerDefeat: 0
   expPerDefeat: 0
+  levelUp: 0
   unitPrefab: {fileID: 239441940318029013, guid: 5e62b99a81dbd6926bb3b051a2fc911b, type: 3}

@@ -9,5 +9,6 @@ public class WeaponSO : ScriptableObject
     public string magicType;
     public string rareza;
     public Sprite weaponImage;
-    public AbilitySO[] abilities;
+    public AbilitySO firstAbility;
+    public AbilitySO secondAbility;
 }
