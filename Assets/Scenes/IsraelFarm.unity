@@ -19286,6 +19286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSlime (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794611536362399183, guid: 35bf0ac3bffb003bfbe3237936fff421, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bf0ac3bffb003bfbe3237936fff421, type: 3}
 --- !u!4 &1171572940 stripped
@@ -21228,6 +21232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSlime
       objectReference: {fileID: 0}
+    - target: {fileID: 8794611536362399183, guid: 35bf0ac3bffb003bfbe3237936fff421, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bf0ac3bffb003bfbe3237936fff421, type: 3}
 --- !u!4 &1484691458 stripped
@@ -21253,6 +21261,7 @@ GameObject:
   - component: {fileID: 1527362167}
   - component: {fileID: 1527362168}
   - component: {fileID: 1527362169}
+  - component: {fileID: 1527362170}
   m_Layer: 7
   m_Name: Chest
   m_TagString: Interactable
@@ -21351,6 +21360,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1527362170}
+        m_TargetAssemblyTypeName: GiveAWeapon, Assembly-CSharp
+        m_MethodName: OnTakeWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1527362168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21378,6 +21399,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InGameEvent: {fileID: 11400000, guid: 8a0b41f71341269379d76f0d9b49838f, type: 2}
+--- !u!114 &1527362170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527362164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a271b32267bdb6fc928b7bb4f739a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 940a4127e540818b1bb2caae028f2a18, type: 2}
+  inventory: {fileID: 11400000, guid: 3fc7ca764e8047ff8b4c3f7878df3b1c, type: 2}
 --- !u!1001 &1547876754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21622,6 +21657,10 @@ PrefabInstance:
     - target: {fileID: 8794611536362399183, guid: 35bf0ac3bffb003bfbe3237936fff421, type: 3}
       propertyPath: m_Name
       value: BlueSlime (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794611536362399183, guid: 35bf0ac3bffb003bfbe3237936fff421, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bf0ac3bffb003bfbe3237936fff421, type: 3}

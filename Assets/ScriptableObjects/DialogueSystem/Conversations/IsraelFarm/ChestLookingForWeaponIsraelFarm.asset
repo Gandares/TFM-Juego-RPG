@@ -26,10 +26,13 @@ MonoBehaviour:
     text: Por eso los caballeros llevan dos consigo, para cubrir las debilidades
       de cada arma.
   - character: {fileID: 11400000, guid: e9718a1c45c9fcfad9d00e9fea80a8be, type: 2}
-    text: "Contra los slimes, con esa espada deberia valer, le causaras un da\xF1o
-      neutro, ni poco eficaz, ni muy eficaz."
+    text: "Contra los slimes, con esa espada imbuida en madera deberia valer, le
+      causaras un da\xF1o neutro, ni poco eficaz, ni muy eficaz."
   - character: {fileID: 11400000, guid: e9718a1c45c9fcfad9d00e9fea80a8be, type: 2}
     text: Ademas algunas armas tienen poderes especiales, pero esa que te dejo no
       tiene, es muy basica.
+  - character: {fileID: 11400000, guid: e9718a1c45c9fcfad9d00e9fea80a8be, type: 2}
+    text: "En un combate, es normal que acabes da\xF1ado, asi que si los slimes te
+      estan causando problemas, puedes descansar en el taburete que hay a tu izquierda."
   - character: {fileID: 11400000, guid: 8873a1078da5e0b648f57fe3bd1dde62, type: 2}
-    text: Gracias por la leccion, ahora a probarla.
+    text: Gracias por la leccion, ahora ya que la tengo equipada, voy a probarla.
