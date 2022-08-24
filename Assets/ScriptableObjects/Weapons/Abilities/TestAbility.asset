@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Habilidad testeo
   damage: 30
-  costeMana: 10
+  costeMana: 30
   MagicType: madera
   Image: {fileID: -7485348705960946297, guid: dd8001ebf87bdecf78be2ce4aae05c0c, type: 3}

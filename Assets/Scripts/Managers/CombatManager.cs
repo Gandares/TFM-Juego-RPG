@@ -25,6 +25,7 @@ public class CombatManager : MonoBehaviour
     public string noPrimaryWeaponInfoText = "No tiene ningún arma equipada de la primera ranura";
     public string noSecondaryWeaponInfoText = "No tiene ningún arma equipada de la segunda ranura";
     public string NoAbilityInfoText = "Ranura de habilidad vacía.";
+    public string NoManaInfoText = "No tiene suficiente maná.";
 
     [Header("Dependencies")]
     public CombatUI combatUI;
@@ -73,7 +74,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            PlayerAttack(_inventory.firstWeapon.damage, false);
+            PlayerAttack(_inventory.firstWeapon.damage, false, 0);
         }
     }
 
@@ -88,7 +89,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            PlayerAttack(_inventory.secondWeapon.damage, false);
+            PlayerAttack(_inventory.secondWeapon.damage, false, 0);
         }
     }
 
@@ -106,7 +107,12 @@ public class CombatManager : MonoBehaviour
             this.combatUI.SetInfoText(NoAbilityInfoText);
             return;
         }
-        PlayerAttack(_inventory.firstWeapon.firstAbility.damage, true);
+        if (_inventory.firstWeapon.firstAbility.costeMana > _Player.currentMana)
+        {
+            this.combatUI.SetInfoText(NoManaInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.firstWeapon.firstAbility.damage, true, _inventory.firstWeapon.firstAbility.costeMana);
     }
 
     public void OnPlayerUseSecondMagicFirstWeapon()
@@ -123,7 +129,12 @@ public class CombatManager : MonoBehaviour
             this.combatUI.SetInfoText(NoAbilityInfoText);
             return;
         }
-        PlayerAttack(_inventory.firstWeapon.secondAbility.damage, true);
+        if (_inventory.firstWeapon.secondAbility.costeMana > _Player.currentMana)
+        {
+            this.combatUI.SetInfoText(NoManaInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.firstWeapon.secondAbility.damage, true, _inventory.firstWeapon.secondAbility.costeMana);
     }
 
     public void OnPlayerUseFirstMagicSecondWeapon()
@@ -140,7 +151,12 @@ public class CombatManager : MonoBehaviour
             this.combatUI.SetInfoText(NoAbilityInfoText);
             return;
         }
-        PlayerAttack(_inventory.secondWeapon.firstAbility.damage, true);
+        if (_inventory.secondWeapon.firstAbility.costeMana > _Player.currentMana)
+        {
+            this.combatUI.SetInfoText(NoManaInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.secondWeapon.firstAbility.damage, true, _inventory.secondWeapon.firstAbility.costeMana);
     }
 
     public void OnPlayerUseSecondMagicSecondWeapon()
@@ -157,15 +173,20 @@ public class CombatManager : MonoBehaviour
             this.combatUI.SetInfoText(NoAbilityInfoText);
             return;
         }
-        PlayerAttack(_inventory.secondWeapon.secondAbility.damage, true);
+        if (_inventory.secondWeapon.secondAbility.costeMana > _Player.currentMana)
+        {
+            this.combatUI.SetInfoText(NoManaInfoText);
+            return;
+        }
+        PlayerAttack(_inventory.secondWeapon.secondAbility.damage, true, _inventory.secondWeapon.secondAbility.costeMana);
     }
 
-    private void PlayerAttack(float extraDamage, bool usedMagic)
+    private void PlayerAttack(float extraDamage, bool usedMagic, float manaCost)
     {
         if (this._combatState != CombatStates.PLAYERTURN)
             return;
 
-        this._request.player.AttackUnit(this._currentEnemy, extraDamage, usedMagic);
+        this._request.player.AttackUnit(this._currentEnemy, extraDamage, usedMagic, manaCost);
 
         if (this._currentEnemy.currentHP <= 0f) // Enemy is dead
         {
@@ -192,6 +213,7 @@ public class CombatManager : MonoBehaviour
         this._Player.levelUp = false;
 
         this._currentEnemy.currentHP = this._currentEnemy.maxHP;
+        this._currentEnemy.currentMana = this._currentEnemy.maxMana;
 
         // Instantiate enemy
         this._currentEnemyGO = Instantiate(this._currentEnemy.unitPrefab, this._request.enemyPosition.position, Quaternion.identity);
@@ -225,7 +247,7 @@ public class CombatManager : MonoBehaviour
 
         // Enemy attacks
         this.combatUI.SetInfoText(enemyAttackedInfoText);
-        this._currentEnemy.AttackUnit(this._request.player, 0.0f, false);
+        this._currentEnemy.AttackUnit(this._request.player, 0.0f, false, 0);
 
         yield return new WaitForSeconds(this.timeBetweenActions);
 

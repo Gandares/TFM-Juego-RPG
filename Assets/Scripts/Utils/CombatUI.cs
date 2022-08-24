@@ -23,8 +23,10 @@ public class CombatUI : MonoBehaviour
 
     public TextMeshProUGUI playerName;
     public Slider playerHP;
+    public Slider playerMana;
     public TextMeshProUGUI enemyName;
     public Slider enemyHP;
+    public Slider enemyMana;
 
     public Image FirstWeapon;
     public Image SecondWeapon;
@@ -58,9 +60,15 @@ public class CombatUI : MonoBehaviour
         this.playerHP.minValue = 0;
         this.playerHP.maxValue = this._player.maxHP;
 
+        this.playerMana.minValue = 0;
+        this.playerMana.maxValue = this._player.maxMana;
+
         this.enemyName.text = this._enemy.unitName;
         this.enemyHP.minValue = 0;
         this.enemyHP.maxValue = this._enemy.maxHP;
+
+        this.enemyMana.minValue = 0;
+        this.enemyMana.maxValue = this._enemy.maxMana;
 
         this.levelText.text = level.ToString();
 
@@ -168,10 +176,18 @@ public class CombatUI : MonoBehaviour
         this.playerHP.maxValue = 0;
         this.playerHP.value = 0;
 
+        this.playerMana.minValue = 0;
+        this.playerMana.maxValue = 0;
+        this.playerMana.value = 0;
+
         this.enemyName.text = "";
         this.enemyHP.minValue = 0;
         this.enemyHP.maxValue = 0;
         this.enemyHP.value = 0;
+
+        this.enemyMana.minValue = 0;
+        this.enemyMana.maxValue = 0;
+        this.enemyMana.value = 0;
 
         this.levelText.text = "";
 
@@ -191,10 +207,14 @@ public class CombatUI : MonoBehaviour
 
     private void Update()
     {
-        if (this._player != null)
+        if (this._player != null) {
             this.playerHP.value = this._player.currentHP;
+            this.playerMana.value = this._player.currentMana;
+        }
 
-        if (this._enemy != null)
+        if (this._enemy != null) {
             this.enemyHP.value = this._enemy.currentHP;
+            this.enemyMana.value = this._enemy.currentMana;
+        }
     }
 }

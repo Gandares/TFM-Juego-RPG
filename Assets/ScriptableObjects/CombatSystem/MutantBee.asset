@@ -20,7 +20,10 @@ MonoBehaviour:
   baseHP: 40
   maxHP: 40
   currentHP: 40
-  attackPowerBase: 80
+  baseMana: 30
+  maxMana: 30
+  currentMana: 30
+  attackPowerBase: 5
   attackPower: 5
   healingPowerBase: 10
   healingPower: 10

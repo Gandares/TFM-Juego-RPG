@@ -14,6 +14,10 @@ public class CombatUnitSO : ScriptableObject
     public float maxHP;
     public float currentHP;
 
+    public float baseMana;
+    public float maxMana;
+    public float currentMana;
+
     public float attackPowerBase;
     public float attackPower;
     public float healingPowerBase;
@@ -28,7 +32,7 @@ public class CombatUnitSO : ScriptableObject
 
 
 
-    public void AttackUnit(CombatUnitSO other, float extraDamage, bool usedMagic)
+    public void AttackUnit(CombatUnitSO other, float extraDamage, bool usedMagic, float manaCost)
     {
         if (!usedMagic)
         {
@@ -38,6 +42,7 @@ public class CombatUnitSO : ScriptableObject
         else
         {
             other.TakeDamage(extraDamage);
+            LessMana(manaCost);
         }
     }
 
@@ -47,6 +52,11 @@ public class CombatUnitSO : ScriptableObject
 
         if (this.currentHP < 0f)
             this.currentHP = 0f;
+    }
+
+    public void LessMana(float manaCost)
+    {
+        this.currentMana -= manaCost;
     }
 
     public void Heal(float heal)
@@ -60,6 +70,11 @@ public class CombatUnitSO : ScriptableObject
     public void ResetHP()
     {
         this.currentHP = this.maxHP;
+    }
+
+    public void ResetMana()
+    {
+        this.currentMana = this.maxMana;
     }
 
     public void GainXP(float experience)
@@ -78,6 +93,7 @@ public class CombatUnitSO : ScriptableObject
     {
         this.level++;
         this.maxHP = this.baseHP + (this.baseHP * 0.2f * this.level);
+        this.maxMana = this.baseMana + (this.baseMana * 0.2f * this.level);
         this.attackPower = this.attackPowerBase + (this.attackPowerBase * 0.2f * this.level);
         this.healingPower = this.healingPowerBase + (this.healingPowerBase * 0.2f * this.level);
         this.MaxExp = this.expBase + (this.expBase * 0.2f * this.level);

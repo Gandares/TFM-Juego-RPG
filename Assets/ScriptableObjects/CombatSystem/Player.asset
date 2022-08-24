@@ -15,16 +15,19 @@ MonoBehaviour:
   unitName: Gabe
   level: 1
   expBase: 100
-  Exp: 0
+  Exp: 50
   MaxExp: 100
   baseHP: 100
   maxHP: 100
   currentHP: 100
+  baseMana: 100
+  maxMana: 100
+  currentMana: 100
   attackPowerBase: 10
   attackPower: 10
   healingPowerBase: 50
   healingPower: 50
   moneyPerDefeat: 0
   expPerDefeat: 0
-  levelUp: 0
+  levelUp: 1
   unitPrefab: {fileID: 239441940318029013, guid: 5e62b99a81dbd6926bb3b051a2fc911b, type: 3}

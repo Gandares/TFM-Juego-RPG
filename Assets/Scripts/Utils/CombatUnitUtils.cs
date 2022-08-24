@@ -9,5 +9,6 @@ public CombatUnitSO _player;
     public void OnCompleteHeal()
     {
         _player.ResetHP();
+        _player.ResetMana();
     }
 }

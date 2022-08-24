@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MainCharacterInventory
   m_EditorClassIdentifier: 
   gold: 145
-  firstWeapon: {fileID: 0}
-  secondWeapon: {fileID: 0}
+  firstWeapon: {fileID: 11400000, guid: 940a4127e540818b1bb2caae028f2a18, type: 2}
+  secondWeapon: {fileID: 11400000, guid: 940a4127e540818b1bb2caae028f2a18, type: 2}
