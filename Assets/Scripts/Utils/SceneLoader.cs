@@ -4,8 +4,7 @@ using ScriptableObjectArchitecture;
 public class SceneLoader : MonoBehaviour
 {
     [Header("Configuration")]
-    public SceneSO sceneToLoad;
-    public LevelEntranceSO levelEntrance;
+    public EntranceSceneToLoadSO EntranceSceneToLoad;
     public bool loadingScreen;
 
     [Header("Player Path")]
@@ -16,11 +15,11 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        if (this.levelEntrance != null && this.playerPath != null)
-            this.playerPath.levelEntrance = this.levelEntrance;
+        if (this.EntranceSceneToLoad.levelEntrance != null && this.playerPath != null)
+            this.playerPath.levelEntrance = this.EntranceSceneToLoad.levelEntrance;
 
         var request = new LoadSceneRequest(
-            scene: this.sceneToLoad,
+            scene: this.EntranceSceneToLoad.Scene,
             loadingScreen: this.loadingScreen
         );
 

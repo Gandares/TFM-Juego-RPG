@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21c27cfd1c59747c3a5bedf3f814d468, type: 3}
-  m_Name: Combat
+  m_Script: {fileID: 11500000, guid: 3cc613638c41f4f929881e77d6f69b54, type: 3}
+  m_Name: EntranceSceneToLoad
   m_EditorClassIdentifier: 
-  sceneName: Combat
+  Scene: {fileID: 11400000, guid: fd2dfbf01bb4d4185bf9a9e9c5b7642e, type: 2}
+  levelEntrance: {fileID: 11400000, guid: d58d3002c51d042769c2ed8eb087cc12, type: 2}

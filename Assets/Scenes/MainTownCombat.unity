@@ -4043,6 +4043,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9121014773085786448}
+        m_TargetAssemblyTypeName: ModifyEntranceSceneToLoad, Assembly-CSharp
+        m_MethodName: Modify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &3338871525741538158
 Transform:
   m_ObjectHideFlags: 0
@@ -4082,6 +4094,7 @@ GameObject:
   - component: {fileID: 2282563132896778355}
   - component: {fileID: 6853692974357874258}
   - component: {fileID: 9121014773085786447}
+  - component: {fileID: 9121014773085786448}
   m_Layer: 0
   m_Name: LevelInitializer
   m_TagString: Untagged
@@ -4107,3 +4120,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2d43f8c85208376f8ef965cb46acbc3, type: 2}
   enemyPosition: {fileID: 1935467177}
   combatRequestEvent: {fileID: 11400000, guid: 09d79ef683c56364fa8eb6c48bccfe6f, type: 2}
+--- !u!114 &9121014773085786448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121014773085786446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8d422cf46d591f0be6a2e8f8637da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: {fileID: 11400000, guid: fd2dfbf01bb4d4185bf9a9e9c5b7642e, type: 2}
+  LevelEntrance: {fileID: 11400000, guid: d58d3002c51d042769c2ed8eb087cc12, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}

@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 82230977}
   - component: {fileID: 82230976}
   - component: {fileID: 82230975}
+  - component: {fileID: 82230978}
   m_Layer: 7
   m_Name: ExitToMainCharacterHouse
   m_TagString: Untagged
@@ -291,8 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1662437668954e66b3dd6486cf11472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: e1a05427b5469912cad27d6de4f4d9dd, type: 2}
-  levelEntrance: {fileID: 11400000, guid: 98eabc612e6caa2e98d2e786a8afd765, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: 83193d68c2de44e0db1abbf5b2334c9d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 1fe240c6082bd408e9980670f68824b1, type: 2}
@@ -312,6 +312,18 @@ MonoBehaviour:
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 82230978}
+        m_TargetAssemblyTypeName: ModifyEntranceSceneToLoad, Assembly-CSharp
+        m_MethodName: Modify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 82230975}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -356,6 +368,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3607826, y: 1.1384063}
   m_EdgeRadius: 0
+--- !u!114 &82230978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82230973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8d422cf46d591f0be6a2e8f8637da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: {fileID: 11400000, guid: e1a05427b5469912cad27d6de4f4d9dd, type: 2}
+  LevelEntrance: {fileID: 11400000, guid: 98eabc612e6caa2e98d2e786a8afd765, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
 --- !u!1001 &84565207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -610,6 +637,7 @@ GameObject:
   - component: {fileID: 187444382}
   - component: {fileID: 187444381}
   - component: {fileID: 187444380}
+  - component: {fileID: 187444383}
   m_Layer: 7
   m_Name: ExitToIsraelFarm
   m_TagString: Untagged
@@ -643,8 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1662437668954e66b3dd6486cf11472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: 6330da6b2288c66c5a8b614242321506, type: 2}
-  levelEntrance: {fileID: 11400000, guid: 3c03098ee9e443530b3d8a7e8f1f9751, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: 83193d68c2de44e0db1abbf5b2334c9d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 1fe240c6082bd408e9980670f68824b1, type: 2}
@@ -664,6 +691,18 @@ MonoBehaviour:
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 187444383}
+        m_TargetAssemblyTypeName: ModifyEntranceSceneToLoad, Assembly-CSharp
+        m_MethodName: Modify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 187444380}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -708,6 +747,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.251089}
   m_EdgeRadius: 0
+--- !u!114 &187444383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187444378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8d422cf46d591f0be6a2e8f8637da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: {fileID: 11400000, guid: 6330da6b2288c66c5a8b614242321506, type: 2}
+  LevelEntrance: {fileID: 11400000, guid: 3c03098ee9e443530b3d8a7e8f1f9751, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
 --- !u!1001 &192593823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1579,6 +1633,7 @@ GameObject:
   - component: {fileID: 505185877}
   - component: {fileID: 505185876}
   - component: {fileID: 505185875}
+  - component: {fileID: 505185878}
   m_Layer: 7
   m_Name: ExitToCombat
   m_TagString: Untagged
@@ -1612,8 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1662437668954e66b3dd6486cf11472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: 05ca82f0737d37853bcd96389b1862b7, type: 2}
-  levelEntrance: {fileID: 0}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: 83193d68c2de44e0db1abbf5b2334c9d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 1fe240c6082bd408e9980670f68824b1, type: 2}
@@ -1633,6 +1687,18 @@ MonoBehaviour:
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 505185878}
+        m_TargetAssemblyTypeName: ModifyEntranceSceneToLoad, Assembly-CSharp
+        m_MethodName: Modify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 505185875}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -1677,6 +1743,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1722026, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &505185878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505185873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8d422cf46d591f0be6a2e8f8637da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: {fileID: 11400000, guid: 05ca82f0737d37853bcd96389b1862b7, type: 2}
+  LevelEntrance: {fileID: 0}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
 --- !u!1 &507010873
 GameObject:
   m_ObjectHideFlags: 0
@@ -22004,6 +22085,7 @@ GameObject:
   - component: {fileID: 2080956073}
   - component: {fileID: 2080956072}
   - component: {fileID: 2080956071}
+  - component: {fileID: 2080956074}
   m_Layer: 7
   m_Name: ExitToHouse
   m_TagString: Untagged
@@ -22037,8 +22119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1662437668954e66b3dd6486cf11472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: 5e99f71eabcae4fd2a04e112daeaceed, type: 2}
-  levelEntrance: {fileID: 11400000, guid: 59ccb61a76fa946879f7bb492e9e4b75, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: 83193d68c2de44e0db1abbf5b2334c9d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 1fe240c6082bd408e9980670f68824b1, type: 2}
@@ -22058,6 +22139,18 @@ MonoBehaviour:
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2080956074}
+        m_TargetAssemblyTypeName: ModifyEntranceSceneToLoad, Assembly-CSharp
+        m_MethodName: Modify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2080956071}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -22102,6 +22195,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1722026, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2080956074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080956069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8d422cf46d591f0be6a2e8f8637da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: {fileID: 11400000, guid: 5e99f71eabcae4fd2a04e112daeaceed, type: 2}
+  LevelEntrance: {fileID: 11400000, guid: 59ccb61a76fa946879f7bb492e9e4b75, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
 --- !u!1001 &2108264690
 PrefabInstance:
   m_ObjectHideFlags: 0

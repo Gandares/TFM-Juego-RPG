@@ -22056,6 +22056,7 @@ GameObject:
   - component: {fileID: 1067128961}
   - component: {fileID: 1067128960}
   - component: {fileID: 1067128959}
+  - component: {fileID: 1067128962}
   m_Layer: 7
   m_Name: ExitToTown
   m_TagString: Untagged
@@ -22089,8 +22090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1662437668954e66b3dd6486cf11472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: fd2dfbf01bb4d4185bf9a9e9c5b7642e, type: 2}
-  levelEntrance: {fileID: 11400000, guid: 08db878d6b8ff4e4cbc862602ae2c850, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: 83193d68c2de44e0db1abbf5b2334c9d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 1fe240c6082bd408e9980670f68824b1, type: 2}
@@ -22110,6 +22110,18 @@ MonoBehaviour:
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1067128962}
+        m_TargetAssemblyTypeName: ModifyEntranceSceneToLoad, Assembly-CSharp
+        m_MethodName: Modify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1067128959}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -22154,6 +22166,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9940763, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1067128962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067128957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8d422cf46d591f0be6a2e8f8637da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: {fileID: 11400000, guid: fd2dfbf01bb4d4185bf9a9e9c5b7642e, type: 2}
+  LevelEntrance: {fileID: 11400000, guid: 08db878d6b8ff4e4cbc862602ae2c850, type: 2}
+  EntranceSceneToLoad: {fileID: 11400000, guid: ea0dbc9ffa36d994da60b3eea2e21a5d, type: 2}
 --- !u!1 &1221952865
 GameObject:
   m_ObjectHideFlags: 0

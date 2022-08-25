@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/House.unity
     guid: e1fe262fa90de41b48c74a0f5f4a9d10
   - enabled: 1
-    path: Assets/Scenes/Combat.unity
+    path: Assets/Scenes/MainTownCombat.unity
     guid: 537d02379824da3848cccfe54b6f1a27
   - enabled: 1
     path: Assets/Scenes/MainCharacterHouse.unity
