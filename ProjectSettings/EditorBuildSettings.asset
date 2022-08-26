@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IsraelFarm.unity
     guid: 655ac0c73db3487e7b12dd5abd7facbf
+  - enabled: 1
+    path: Assets/Scenes/BlueSlime1Combat.unity
+    guid: 32d8879f450a80b03ba4f268684762a1
+  - enabled: 1
+    path: Assets/Scenes/BlueSlime2Combat.unity
+    guid: 1d2e413a705895cf7bb76236aecc01d7
+  - enabled: 1
+    path: Assets/Scenes/BlueSlime3Combat.unity
+    guid: 3fba6197b68675945b95cf91c71b072e
   m_configObjects: {}
