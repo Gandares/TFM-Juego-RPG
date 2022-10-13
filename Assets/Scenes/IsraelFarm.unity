@@ -4623,6 +4623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCameras
       objectReference: {fileID: 0}
+    - target: {fileID: 9073994927134837651, guid: a9788c2618f474d9f965b5b6cd26444d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9073994927237537411, guid: a9788c2618f474d9f965b5b6cd26444d, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 7.5

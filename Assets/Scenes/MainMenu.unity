@@ -15656,7 +15656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154967622668983375, guid: 73e75f8a096ad99fdbb68b16e1517ea9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 550
+      value: 488
       objectReference: {fileID: 0}
     - target: {fileID: 2154967623267490754, guid: 73e75f8a096ad99fdbb68b16e1517ea9, type: 3}
       propertyPath: m_fontSize
@@ -15768,7 +15768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154967624042006113, guid: 73e75f8a096ad99fdbb68b16e1517ea9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: 167
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e75f8a096ad99fdbb68b16e1517ea9, type: 3}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c32ce66ee8801b5b6a9740d5397caf3c, type: 3}
-  m_Name: TestAbility
+  m_Name: Cortes de plata
   m_EditorClassIdentifier: 
-  name: Habilidad testeo
-  damage: 30
+  name: Cortes de plata
+  damage: 40
   costeMana: 30
   MagicType: madera
   Image: {fileID: -7485348705960946297, guid: dd8001ebf87bdecf78be2ce4aae05c0c, type: 3}

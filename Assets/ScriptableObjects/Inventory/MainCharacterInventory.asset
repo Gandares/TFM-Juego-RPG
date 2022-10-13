@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a703b1f337adff1acd035535006ff9, type: 3}
   m_Name: MainCharacterInventory
   m_EditorClassIdentifier: 
-  gold: 145
+  gold: 181
   firstWeapon: {fileID: 11400000, guid: 940a4127e540818b1bb2caae028f2a18, type: 2}
-  secondWeapon: {fileID: 11400000, guid: 940a4127e540818b1bb2caae028f2a18, type: 2}
+  secondWeapon: {fileID: 0}

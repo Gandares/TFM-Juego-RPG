@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1c5972c3c9709e28b691c917c5b826, type: 3}
   m_Name: BlueSlime3DefeatedIsraelFarm
   m_EditorClassIdentifier: 
-  EventDone: 0
+  EventDone: 1
